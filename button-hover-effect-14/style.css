@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: verdana, arial, helvetica;
+  background: #222;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #23f456;
+  letter-spacing: 3px;
+
+  border: 3px solid #23f456;
+  transition: all 0.5s;
+  position: relative;
+  mix-blend-mode: difference;
+  overflow: hidden;
+}
+
+span {
+  display: block;
+  width: 100%;
+  padding: 25px 50px;
+}
+
+a:before,
+a:after,
+span:before,
+span:after {
+  content: '';
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background: #23f456;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+a:before {
+  top: 0;
+  left: -25%;
+}
+
+a:after {
+  top: -100%;
+  left: 25%;
+}
+
+a:hover:before {
+  left: 0;
+}
+
+a:hover:after {
+  top: 0;
+}
+
+span:before {
+  bottom: 0;
+  right: -25%;
+}
+
+span:after {
+  bottom: -100%;
+  right: 25%;
+}
+
+span:hover:before {
+  right: 0;
+}
+
+span:hover:after {
+  bottom: 0;
+}
+
+a:hover {
+  color: black;
+}
